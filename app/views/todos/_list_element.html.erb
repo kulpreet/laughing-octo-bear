@@ -1,0 +1,10 @@
+<tr>
+  <td> <%= todo.priority %> </td>
+  <td> <%= todo.description %> </td>
+  <td> <%= todo.due_date.to_formatted_s(:short) %> </td>
+  <td> <%= todo.completed? ? 'Complete' : 'Pending' %> </td>
+  <td> 
+    <%= link_to 'Edit', edit_todo_path(todo) %> | 
+    <%= link_to 'Delete', todo_path(todo), :method => :delete %> 
+  </td>
+</tr>

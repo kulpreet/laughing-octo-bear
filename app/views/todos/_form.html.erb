@@ -1,0 +1,15 @@
+<%= form_for(:todo, :html => { :role => 'form', :class => "form-horizontal col-md-5"}) do |f| %>
+<div class="form-group">
+  <%= f.label :description, :class => "control-label" %>
+  <%= f.text_area :description, :class => "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :priority, :class => "control-label"  %>
+  <%= f.select :priority, (1..5).to_a, {}, :class => "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :due_date, :class => "control-label"  %>
+  <%= f.datetime_select :due_date, :class => "form-control" %>
+</div>
+<%= f.button :submit, :class => "btn btn-default" %>
+<% end %>

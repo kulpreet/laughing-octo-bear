@@ -5,4 +5,8 @@ class Todo < ActiveRecord::Base
 
   belongs_to :user
 
+  def to_json(options={})
+    super(:only => [:id, :description, :due_date, :completed])
+  end
+
 end
