@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
-  doorkeeper_for :all   
   # before_filter :authenticate_user!
+  doorkeeper_for :all   
 
   def index
     @users = User.all

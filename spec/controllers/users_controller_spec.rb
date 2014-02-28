@@ -2,9 +2,12 @@ require 'spec_helper'
 
 describe UsersController do
 
+  let(:token) { double :accessible? => true }
+
   before (:each) do
     @user = FactoryGirl.create(:user)
     sign_in @user
+    controller.stub(:doorkeeper_token) { token }
   end
 
   describe "GET 'show'" do
