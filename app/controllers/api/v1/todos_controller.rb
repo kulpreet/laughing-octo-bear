@@ -5,6 +5,6 @@ module Api::V1
     doorkeeper_for :all
     respond_to :json
 
-    include TodoMethods
+    include TodoMethods    
   end
 end
