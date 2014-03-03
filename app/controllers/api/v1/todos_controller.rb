@@ -1,3 +1,5 @@
+require "#{Rails.root}/lib/todo_methods"
+
 module Api::V1
   class TodosController < ApiController
     doorkeeper_for :all
